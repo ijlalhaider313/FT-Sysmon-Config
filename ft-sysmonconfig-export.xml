@@ -59,6 +59,10 @@
   FILTERING: Filter conditions available for use are: is,is not,contains,contains any,contains all,excludes,excludes any,excludes all,begin with,end with,less than,more than,image
   - The "image" filter is usable on any field. Same as "is" but can either match entire string, or only the text after last "\". Credit: @mattifestation
 
+  CHANGES TO ORIGINAL CONFIG:
+  - Remove Conhost.exe from EVID 1 Filter
+  - Include EVID 7 to Appdata and Public User directory.
+
 -->
 
 <Sysmon schemaversion="4.50">
@@ -425,6 +429,9 @@
 	<RuleGroup name="" groupRelation="or">
 		<ImageLoad onmatch="include">
 			<!--NOTE: Using "include" with no rules means nothing in this section will be logged-->
+			<ImageLoaded condition="contains">\Appdata\Local\</ImageLoaded>
+			<ImageLoaded condition="contains">\Appdata\Roaming\</ImageLoaded>
+			<ImageLoaded condition="begin with">C:\Users\Public\</ImageLoaded>
 		</ImageLoad>
 	</RuleGroup>
 
