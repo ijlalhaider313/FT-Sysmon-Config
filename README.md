@@ -9,6 +9,7 @@ The file should function as a great starting point for system change monitoring 
 Added:
 - DLL Loading from temp directory
 - Removed Conhost exclusion from EVID 1
+- File events in MS Office Templates Directory (Emotet)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[See other forks of this configuration](https://github.com/SwiftOnSecurity/sysmon-config/network)**
 
