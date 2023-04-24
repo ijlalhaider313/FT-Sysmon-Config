@@ -737,10 +737,14 @@
 			<TargetObject name="InvDB-CompileTimeClaim" condition="end with">\LinkDate</TargetObject> <!-- Compile time of EXE, may not be reliable [ https://en.wikipedia.org/wiki/Link_time ] -->
 			<TargetObject name="InvDB" condition="contains">Compatibility Assistant\Store\</TargetObject> <!-- Inventory -->
 			<!--Suspicious sources-->
-			<Image name="Suspicious,ImageBeginWithBackslash" condition="end with">regedit.exe</Image> <!--Users and helpdesk staff making system modifications -->
-			<Image name="Suspicious,ImageBeginWithBackslash" condition="end with">reg.exe</Image> <!--Users and helpdesk staff making system modifications -->
-			<Image name="Suspicious,ImageBeginWithBackslash" condition="begin with">C:\Users\Public</Image> <!-- Public TMP Location -->
-			<Image name="Suspicious,ImageBeginWithBackslash" condition="contains">\appdata\local\</Image> <!-- User TMP Location -->
+			<Image name="Suspicious,Regedit" condition="end with">regedit.exe</Image> <!--Users and helpdesk staff making system modifications -->
+			<Image name="Suspicious,Reg" condition="end with">reg.exe</Image> <!--Users and helpdesk staff making system modifications -->
+			<Image name="Suspicious,wscript" condition="end with">wscript.exe</Image> <!--Automation with vbs/jscript engines -->
+			<Image name="Suspicious,cscript" condition="end with">cscript.exe</Image> <!--Automation with vbs/jscript engines -->
+			<Image name="Suspicious,PublicTMP" condition="begin with">C:\Users\Public</Image> <!-- Public TMP Location -->
+			<Image name="Suspicious,WinTMP" condition="begin with">C:\Windows\Temp</Image> <!-- Windows TMP Location -->
+			<Image name="Suspicious,WinFonts" condition="begin with">C:\Windows\Fonts</Image> <!-- Windows Fonts Location -->
+			<Image name="Suspicious,UserTMP" condition="contains">\appdata\local\</Image> <!-- User TMP Location -->
 			<Image name="Suspicious,ImageBeginWithBackslash" condition="begin with">\</Image> <!--Devices and VSC shouldn't be executing changes | Credit: @SBousseaden @ionstorm @neu5ron @PerchedSystems [ https://twitter.com/SwiftOnSecurity/status/1133167323991486464 ] -->
 			
 		</RegistryEvent>
