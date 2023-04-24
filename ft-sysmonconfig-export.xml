@@ -62,6 +62,7 @@
   CHANGES TO ORIGINAL CONFIG:
   - Remove Conhost.exe from EVID 1 Filter
   - Include EVID 7 to Appdata and Public User directory.
+  - Registry: Add reg.exe, wscript.exe, cscript.exe to included processes. Add additional TMP paths. 
 
 -->
 
