@@ -549,7 +549,8 @@
 			<TargetFilename name="Emotet" condition="begin with">C:\Program Files\Microsoft Office (x86)\Templates</TargetFilename> <!-- 2022 Emotet IOC -->
 			<TargetFilename name="Emotet" condition="begin with">C:\Program Files\Microsoft Office\Templates</TargetFilename> <!-- 2022 Emotet IOC -->
 			<TargetFilename name="Emotet" condition="begin with">C:\Program Files (x86)\Microsoft Office\root\Templates</TargetFilename> <!-- 2022 Emotet IOC -->
-			<TargetFilename name="Emotet" condition="begin with">C:\Program Files\Microsoft Office\root\Templates</TargetFilename> <!-- 2022 Emotet IOC -->			
+			<TargetFilename name="Emotet" condition="begin with">C:\Program Files\Microsoft Office\root\Templates</TargetFilename> <!-- 2022 Emotet IOC -->	
+			<TargetFilename name="Malware Stager" condition="begin with">C:\ProgramData</TargetFilename> <!-- FT Malware Staging Directory -->
 		</FileCreate>
 	</RuleGroup>
 
