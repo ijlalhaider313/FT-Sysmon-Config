@@ -10,6 +10,7 @@ Added:
 - DLL Loading from temp directory
 - Removed Conhost exclusion from EVID 1
 - File events in MS Office Templates Directory (Emotet)
+- File events in C:\ProgramData directory (Common for malware stagers)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[See other forks of this configuration](https://github.com/SwiftOnSecurity/sysmon-config/network)**
 
