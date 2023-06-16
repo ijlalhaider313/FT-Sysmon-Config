@@ -441,6 +441,7 @@
 			<ImageLoaded condition="begin with">H:\</ImageLoaded>
 			<ImageLoaded condition="begin with">I:\</ImageLoaded>
 			<ImageLoaded condition="begin with">J:\</ImageLoaded>
+			<ImageLoaded condition="begin with">K:\</ImageLoaded>
 		</ImageLoad>
 	</RuleGroup>
 
