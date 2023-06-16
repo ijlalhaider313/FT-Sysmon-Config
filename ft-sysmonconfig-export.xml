@@ -423,18 +423,34 @@
 	</RuleGroup>
 
 	<!--SYSMON EVENT ID 7 : DLL (IMAGE) LOADED BY PROCESS [ImageLoad]-->
-		<!--COMMENT:	Can cause high system load, disabled by default.-->
-		<!--COMMENT:	[ https://attack.mitre.org/wiki/Technique/T1073 ] [ https://attack.mitre.org/wiki/Technique/T1038 ] [ https://attack.mitre.org/wiki/Technique/T1034 ] -->
+	<!--COMMENT:	Can cause high system load, disabled by default.-->
+	<!--COMMENT:	[ https://attack.mitre.org/wiki/Technique/T1073 ] [ https://attack.mitre.org/wiki/Technique/T1038 ] [ https://attack.mitre.org/wiki/Technique/T1034 ] -->
 
-		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, ImageLoaded, Hashes, Signed, Signature, SignatureStatus-->
+	<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, ImageLoaded, Hashes, Signed, Signature, SignatureStatus-->
 	<RuleGroup name="" groupRelation="or">
 		<ImageLoad onmatch="include">
-			<!--NOTE: Using "include" with no rules means nothing in this section will be logged-->
-			<ImageLoaded condition="contains">\Appdata\Local\</ImageLoaded>
-			<ImageLoaded condition="contains">\Appdata\Roaming\</ImageLoaded>
-			<ImageLoaded condition="begin with">C:\Users\Public\</ImageLoaded>
+			<!-- Contains : This section targets .dll sideloading attempts from userland filespace-->
+			<ImageLoaded condition="contains">\appdata\local\</ImageLoaded>
+			<ImageLoaded condition="begin with">C:\Users\</ImageLoaded>
+			<ImageLoaded condition="contains">\Downloads\</ImageLoaded>
+			<!-- Imageload from mounted drive -->
+			<ImageLoaded condition="begin with">D:\</ImageLoaded>
+			<ImageLoaded condition="begin with">E:\</ImageLoaded>
+			<ImageLoaded condition="begin with">F:\</ImageLoaded>
+			<ImageLoaded condition="begin with">G:\</ImageLoaded>
+			<ImageLoaded condition="begin with">H:\</ImageLoaded>
+			<ImageLoaded condition="begin with">I:\</ImageLoaded>
+			<ImageLoaded condition="begin with">J:\</ImageLoaded>
 		</ImageLoad>
 	</RuleGroup>
+
+	<RuleGroup name="" groupRelation="or">
+		<ImageLoad onmatch="exclude">
+			<!-- Contains -->
+			<ImageLoaded condition="contains">\Microsoft\OneDrive\2</ImageLoaded>
+		</ImageLoad>
+	</RuleGroup>
+
 
 	<!--SYSMON EVENT ID 8 : REMOTE THREAD CREATED [CreateRemoteThread]-->
 		<!--COMMENT:	Monitor for processes injecting code into other processes. Often used by malware to cloak their actions. Also when Firefox loads Flash.
