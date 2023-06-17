@@ -13,7 +13,10 @@ Below are a list of changes made since forking
 - File events in MS Office Templates Directory (Emotet)
 - File events in 'C:\ProgramData' directory (Common for malware stagers)
 ### EVENT ID 7:
-- DLL Loading from temp directory
+- DLL loading from '\appdata\local'
+- DLL loading from '\appdata\roaming'
+- DLL loading from '\Downloads\'
+- DLL loading from 'Non C drives'
 ### EVENT ID 11
 - MS Office templates directory (Emotet)
 - Include 'C:\ProgramData'
