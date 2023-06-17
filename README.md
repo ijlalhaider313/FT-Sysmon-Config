@@ -1,30 +1,45 @@
-# FT-sysmon-config | Forked from Swift-on-Security #
+# FT-sysmon-config: Yet another Sysmon config import file
 
-This is a Microsoft Sysinternals Sysmon configuration file template with default high-quality event tracing.
+This is a Microsoft Sysinternals Sysmon configuration file template whis has been forked from [SwiftOnSecurity](https://github.com/SwiftOnSecurity/sysmon-config)
 
-The file should function as a great starting point for system change monitoring in a self-contained and accessible package. This configuration and results should give you a good idea of what's possible for Sysmon. Note that this does not track things like authentication and other Windows events that are also vital for incident investigation.
+Many of the changes made to this file are for tracking techniques used by modern malware or threat actors. It's important to note that some of the changes may increase logging on the host, when compared to the original sysmon config file that this was forked from. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[sysmonconfig-export.xml](https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml)**
+Used as the default Sysmon configuration file in [Enable-all-the-Logs!](https://github.com/bobby-tablez/Enable-All-The-Logs)
 
-Added:
-- DLL Loading from temp directory
-- Removed Conhost exclusion from EVID 1
+## Changes:
+Below are a list of changes made since forking
+### EVENT ID 1:
+- Removed Conhost exclusion
 - File events in MS Office Templates Directory (Emotet)
-- File events in C:\ProgramData directory (Common for malware stagers)
+- File events in 'C:\ProgramData' directory (Common for malware stagers)
+### EVENT ID 7:
+- DLL Loading from temp directory
+### EVENT ID 11
+- MS Office templates directory (Emotet)
+- Include 'C:\ProgramData'
+###  EVENT ID 12 & 13 & 14
+- Include 'reg.exe'
+- Include 'regedit.exe'
+- Include 'wscript.exe'
+- Include 'cscript.exe'
+- Include 'C:\Windows\Temp'
+- Include 'C:\Windows\Fonts'
+- Include 'C:\Users\Public'
+- Include '\appdata\local\'
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[See other forks of this configuration](https://github.com/SwiftOnSecurity/sysmon-config/network)**
+
 
 ## Use ##
 ### Install ###
 Run with administrator rights
 ~~~~
-sysmon.exe -accepteula -i sysmonconfig-export.xml
+sysmon.exe -accepteula -i ft-sysmonconfig-export.xml
 ~~~~
 
 ### Update existing configuration ###
 Run with administrator rights
 ~~~~
-sysmon.exe -c sysmonconfig-export.xml
+sysmon.exe -c ft-sysmonconfig-export.xml
 ~~~~
 
 ### Uninstall ###
@@ -32,6 +47,8 @@ Run with administrator rights
 ~~~~
 sysmon.exe -u
 ~~~~
+
+**[See other forks of this configuration](https://github.com/SwiftOnSecurity/sysmon-config/network)**
 
 ## Required actions ##
 
