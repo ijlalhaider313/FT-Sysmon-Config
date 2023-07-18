@@ -540,6 +540,8 @@
 			<TargetFilename condition="end with">.wsf</TargetFilename> <!--Scripting | Credit @bartblaze -->
 			<TargetFilename condition="end with">.xlsm</TargetFilename> <!--Microsoft:Office:Word: Macro-->
 			<TargetFilename condition="end with">.ocx</TargetFilename> <!--Microsoft:ActiveX-->
+			<TargetFilename condition="end with">.lnk</TargetFilename> <!--FT Microsoft:LNK-->
+			<TargetFilename condition="end with">.url</TargetFilename> <!--FT Microsoft:URL-->
 			<TargetFilename condition="end with">proj</TargetFilename><!--Microsoft:MSBuild:Script: [ https://twitter.com/subTee/status/885919612969394177 ] -->
 			<TargetFilename condition="end with">.sln</TargetFilename><!--Microsoft:MSBuild:Script: [ https://twitter.com/subTee/status/885919612969394177 ] -->
 			<TargetFilename condition="end with">.xls</TargetFilename><!--Microsoft [ https://medium.com/@threathuntingteam/msxsl-exe-and-wmic-exe-a-way-to-proxy-code-execution-8d524f642b75 ] -->
@@ -567,7 +569,10 @@
 			<TargetFilename name="Emotet" condition="begin with">C:\Program Files\Microsoft Office\Templates</TargetFilename> <!-- 2022 Emotet IOC -->
 			<TargetFilename name="Emotet" condition="begin with">C:\Program Files (x86)\Microsoft Office\root\Templates</TargetFilename> <!-- 2022 Emotet IOC -->
 			<TargetFilename name="Emotet" condition="begin with">C:\Program Files\Microsoft Office\root\Templates</TargetFilename> <!-- 2022 Emotet IOC -->	
-			<TargetFilename name="Malware Stager" condition="begin with">C:\ProgramData</TargetFilename> <!-- FT Malware Staging Directory -->
+			<TargetFilename name="Malware Stager ProgramData" condition="begin with">C:\ProgramData</TargetFilename> <!-- FT Malware Staging Directory -->
+			<TargetFilename name="Malware Windows Fonts" condition="begin with">C:\Windows\Temp</TargetFilename> <!-- FT Windows Temp -->
+			<TargetFilename name="Malware Windows Fonts" condition="begin with">C:\Windows\Fonts</TargetFilename> <!-- FT Windows Fonts -->
+			<TargetFilename name="Malware Windows Fonts" condition="begin with">C:\Windows\Tasks</TargetFilename> <!-- FT Windows Tasks -->
 		</FileCreate>
 	</RuleGroup>
 
