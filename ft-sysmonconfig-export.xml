@@ -430,9 +430,11 @@
 	<RuleGroup name="" groupRelation="or">
 		<ImageLoad onmatch="include">
 			<!-- Contains : This section targets .dll sideloading attempts from userland filespace-->
-			<ImageLoaded condition="contains">\appdata\local\</ImageLoaded>
 			<ImageLoaded condition="begin with">C:\Users\</ImageLoaded>
+			<ImageLoaded condition="contains">\ProgramData\</ImageLoaded>		
 			<ImageLoaded condition="contains">\Downloads\</ImageLoaded>
+			<ImageLoaded condition="contains">\Windows\Fonts</ImageLoaded>
+			<ImageLoaded condition="contains">\Windows\Tasks</ImageLoaded>
 			<!-- Imageload from mounted drive -->
 			<ImageLoaded condition="begin with">D:\</ImageLoaded>
 			<ImageLoaded condition="begin with">E:\</ImageLoaded>
@@ -442,6 +444,21 @@
 			<ImageLoaded condition="begin with">I:\</ImageLoaded>
 			<ImageLoaded condition="begin with">J:\</ImageLoaded>
 			<ImageLoaded condition="begin with">K:\</ImageLoaded>
+			<ImageLoaded condition="begin with">L:\</ImageLoaded>
+			<ImageLoaded condition="begin with">M:\</ImageLoaded>
+			<ImageLoaded condition="begin with">N:\</ImageLoaded>
+			<ImageLoaded condition="begin with">O:\</ImageLoaded>
+			<ImageLoaded condition="begin with">P:\</ImageLoaded>
+			<ImageLoaded condition="begin with">Q:\</ImageLoaded>
+			<ImageLoaded condition="begin with">R:\</ImageLoaded>
+			<ImageLoaded condition="begin with">S:\</ImageLoaded>
+			<ImageLoaded condition="begin with">T:\</ImageLoaded>
+			<ImageLoaded condition="begin with">U:\</ImageLoaded>
+			<ImageLoaded condition="begin with">V:\</ImageLoaded>
+			<ImageLoaded condition="begin with">W:\</ImageLoaded>
+			<ImageLoaded condition="begin with">X:\</ImageLoaded>
+			<ImageLoaded condition="begin with">Y:\</ImageLoaded>
+			<ImageLoaded condition="begin with">Z:\</ImageLoaded>
 		</ImageLoad>
 	</RuleGroup>
 
