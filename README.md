@@ -30,6 +30,7 @@ Below are a list of changes made since forking
 - Include 'regedit.exe'
 - Include 'wscript.exe'
 - Include 'cscript.exe'
+- Include 'powershell.exe', 'powershell_ise.exe','pwsh.exe' (flags changes from New-ItemProperty module)
 - Include 'C:\Windows\Temp'
 - Include 'C:\Windows\Fonts'
 - Include 'C:\Users\Public'
