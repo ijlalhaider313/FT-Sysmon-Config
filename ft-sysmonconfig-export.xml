@@ -780,6 +780,9 @@
 			<!--Suspicious sources-->
 			<Image name="Suspicious,Regedit" condition="end with">regedit.exe</Image> <!--Users and helpdesk staff making system modifications -->
 			<Image name="Suspicious,Reg" condition="end with">reg.exe</Image> <!--Users and helpdesk staff making system modifications -->
+			<Image name="Suspicious,Reg" condition="end with">powershell.exe</Image> <!--Users and helpdesk staff making system modifications. Flags changes using New-ItemProperty module -->
+			<Image name="Suspicious,Reg" condition="end with">powershell_ise.exe</Image> <!--Users and helpdesk staff making system modifications.  Flags changes using New-ItemProperty module -->
+			<Image name="Suspicious,Reg" condition="end with">pwsh.exe</Image> <!--Users and helpdesk staff making system modifications.  Flags changes using New-ItemProperty module -->
 			<Image name="Suspicious,wscript" condition="end with">wscript.exe</Image> <!--Automation with vbs/jscript engines -->
 			<Image name="Suspicious,cscript" condition="end with">cscript.exe</Image> <!--Automation with vbs/jscript engines -->
 			<Image name="Suspicious,PublicTMP" condition="begin with">C:\Users\Public</Image> <!-- Public TMP Location -->
