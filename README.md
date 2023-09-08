@@ -20,6 +20,11 @@ Below are a list of changes made since forking
 ### EVENT ID 11
 - MS Office templates directory (Emotet)
 - Include 'C:\ProgramData'
+- Include 'C:\Windows\Tasks'
+- Include 'C:\Windows\Fonts'
+- Include 'C:\Windows\Temp'
+- Include '.lnk'
+- Include '.url'
 ###  EVENT ID 12 & 13 & 14
 - Include 'reg.exe'
 - Include 'regedit.exe'
