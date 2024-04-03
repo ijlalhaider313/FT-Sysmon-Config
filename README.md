@@ -8,16 +8,16 @@ Used as the default Sysmon configuration file in [Enable-all-the-Logs!](https://
 
 ## Changes:
 Below are a list of changes made since forking
-### EVENT ID 1:
+### EVENT ID 1: (PROCESS CREATE)
 - Removed Conhost exclusion
 - File events in MS Office Templates Directory (Emotet)
 - File events in 'C:\ProgramData' directory (Common for malware stagers)
-### EVENT ID 7:
+### EVENT ID 7: (IMAGE LOAD)
 - DLL loading from '\appdata\local'
 - DLL loading from '\appdata\roaming'
 - DLL loading from '\Downloads\'
 - DLL loading from 'Non C drives'
-### EVENT ID 11
+### EVENT ID 11 (FILE CREATE)
 - MS Office templates directory (Emotet)
 - Include 'C:\ProgramData'
 - Include 'C:\Windows\Tasks'
@@ -25,7 +25,7 @@ Below are a list of changes made since forking
 - Include 'C:\Windows\Temp'
 - Include '.lnk'
 - Include '.url'
-###  EVENT ID 12 & 13 & 14
+###  EVENT ID 12 & 13 & 14 (REGISTRY MODIFICATION)
 - Include 'reg.exe'
 - Include 'regedit.exe'
 - Include 'wscript.exe'
@@ -36,6 +36,18 @@ Below are a list of changes made since forking
 - Include 'C:\Users\Public'
 - Include '\appdata\local\'
 
+###  EVENT ID 17 & 18 (PIPE CREATED)
+- Include '\msagent_'
+- Include '\mojo.5688.8052.'
+- Include '\wkssvc'
+- Include '\ntsvcs'
+- Include '\DserNamePipe'
+- Include '\SearchTextHarvester'
+- Include '\scerpc'
+- Include '\mypipe-f'
+- Include '\mypipe-h'
+- Include '\windows.update.manager'
+- Include '\win_svc'
 
 
 ## Use ##
