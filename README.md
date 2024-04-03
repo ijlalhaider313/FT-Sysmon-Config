@@ -36,7 +36,7 @@ Below are a list of changes made since forking
 - Include 'C:\Users\Public'
 - Include '\appdata\local\'
 
-###  EVENT ID 17 & 18 (PIPE CREATED)
+###  EVENT ID 17 & 18 (NAMED PIPES)
 - Include '\msagent_'
 - Include '\mojo.5688.8052.'
 - Include '\wkssvc'
