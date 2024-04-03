@@ -911,6 +911,9 @@
 
 		<!--ADDITIONAL REFERENCE: [ https://www.cobaltstrike.com/help-smb-beacon ] -->
 		<!--ADDITIONAL REFERENCE: [ https://blog.cobaltstrike.com/2015/10/07/named-pipe-pivoting/ ] -->
+		<!--ADDITIONAL REFERENCE: [ https://gist.github.com/svch0stz/c3288929c0e83eacdd558190b047df6e#file-cobalt-strike-named-pipe-regex-csv ] -->
+		<!--ADDITIONAL REFERENCE: [ https://www.cobaltstrike.com/blog/learn-pipe-fitting-for-all-of-your-offense-projects ] -->
+		<!--ADDITIONAL REFERENCE: [ https://gist.github.com/MHaggis/6c600e524045a6d49c35291a21e10752 ] -->
 
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, PipeName, Image-->
 		<RuleGroup name="" groupRelation="or">
@@ -928,6 +931,16 @@
 				<PipeName condition="begin with">\postex_ssh_</PipeName>
 				<PipeName condition="begin with">\status_</PipeName>
 				<PipeName condition="begin with">\msagent_</PipeName>
+				<PipeName condition="begin with">\mojo.5688.8052.</PipeName>
+				<PipeName condition="begin with">\wkssvc</PipeName>
+				<PipeName condition="begin with">\ntsvcs</PipeName>
+				<PipeName condition="begin with">\DserNamePipe</PipeName>
+				<PipeName condition="begin with">\SearchTextHarvester</PipeName>
+				<PipeName condition="begin with">\scerpc</PipeName>
+				<PipeName condition="begin with">\mypipe-f</PipeName>
+				<PipeName condition="begin with">\mypipe-h</PipeName>
+				<PipeName condition="begin with">\windows.update.manager</PipeName>
+				<PipeName condition="begin with">\win_svc</PipeName>
 			</PipeEvent>
 		</RuleGroup>
 
