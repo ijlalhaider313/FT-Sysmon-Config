@@ -1265,7 +1265,21 @@
 			<Image condition="begin with">C:\Program Files (x86)\Microsoft\Edge\Application\</Image>
 		</ProcessTampering>
 	</RuleGroup>
-	-->
+	
+
+	<!--SYSMON EVENT ID 26 : File DELETE LOGGED-->
+		<!--EVENT 26: "File Delete Logged"-->
+		<!--COMMENT: This event logs file deletions including which user and program and a hash of the contents of the file.
+			[ https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?source=Sysmon&eventID=26 ] -->
+		
+		<!--DATA: Log Name,Source,Date,Event ID,Task,Category,Level,Keywords,User,Computer,Description,RuleName,UtcTime,ProcessGuid,ProcessId,User,Image,TargetFilename,Hashes,IsExecutable -->
+	
+
+	<FileDeleteDetected onmatch="exclude">
+		<User condition="contains any">NETWORK SERVICE; LOCAL SERVICE</User>
+		<Image condition="contains all">\appdata\local\google\chrome\user data\swreporter\;software_reporter_tool.exe</Image>
+		<Image condition="start with">C:\Program Files</Image>
+	</FileDeleteDetected>
 
 	<!--SYSMON EVENT ID 255 : ERROR-->
 		<!--"This event is generated when an error occurred within Sysmon. They can happen if the system is under heavy load
