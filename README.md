@@ -49,6 +49,9 @@ Below are a list of changes made since forking
 - Include '\windows.update.manager'
 - Include '\win_svc'
 
+## EVENT ID 26 (FILE DELETE DETECTED)
+- Enabled
+
 
 ## Use ##
 ### Install ###
