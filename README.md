@@ -49,6 +49,7 @@ Below are a list of changes made since forking
 - Include '\mypipe-h'
 - Include '\windows.update.manager'
 - Include '\win_svc'
+- Exclude 'CompatTelRunner.exe'
 
 ## EVENT ID 26 (FILE DELETE DETECTED)
 - Enabled
