@@ -1284,6 +1284,7 @@
 			<Image condition="contains">software_reporter_tool.exe</Image>
 			<Image condition="begin with">C:\Program Files</Image>
 			<Image condition="end with">\CompatTelRunner.exe</Image>
+			<Image condition="end with">\WerFault.exe</Image>
 		</FileDeleteDetected>
 	</RuleGroup>
 
