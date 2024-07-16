@@ -54,6 +54,7 @@ Below are a list of changes made since forking
 
 ## EVENT ID 26 (FILE DELETE DETECTED)
 - Enabled
+- Exclude 'CompatTelRunner.exe'
 
 
 ## Use ##
