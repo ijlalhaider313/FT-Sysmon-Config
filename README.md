@@ -8,6 +8,9 @@ It's important to note that some of the changes may increase logging on the host
 
 Used as the default Sysmon configuration file in [Enable-all-the-Logs!](https://github.com/bobby-tablez/Enable-All-The-Logs)
 
+## Feel free to contribute!
+If you've got any changes you'd like to make, please fork this repo, and submit a PR with your changes. 
+
 ## Changes:
 Below are a list of changes made since forking
 ### EVENT ID 1: (PROCESS CREATE)
