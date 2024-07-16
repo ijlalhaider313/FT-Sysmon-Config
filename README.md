@@ -41,7 +41,6 @@ Below are a list of changes made since forking
 ###  EVENT ID 17 & 18 (NAMED PIPES)
 - Include '\msagent_'
 - Include '\mojo.5688.8052.'
-- Include '\wkssvc'
 - Include '\ntsvcs'
 - Include '\DserNamePipe'
 - Include '\SearchTextHarvester'
