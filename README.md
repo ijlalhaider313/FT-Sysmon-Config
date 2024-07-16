@@ -2,7 +2,9 @@
 
 This is a Microsoft Sysinternals Sysmon configuration file template whis has been forked from [SwiftOnSecurity](https://github.com/SwiftOnSecurity/sysmon-config)
 
-Many of the changes made to this file are for tracking techniques used by modern malware or threat actors. It's important to note that some of the changes may increase logging on the host, when compared to the original sysmon config file that this was forked from. 
+As a threat researcher, I run a lot of malware for the sake of gathering telemetry and TTPs. When I'm unable to detect a TTP using the default SwiftOnSecurity config import file, a change to the config here and the change is documented below. This repo is a collection of changes based on the detection of current and active malware TTPs. 
+
+It's important to note that some of the changes may increase logging on the host, when compared to the original sysmon config file that this was forked from. 
 
 Used as the default Sysmon configuration file in [Enable-all-the-Logs!](https://github.com/bobby-tablez/Enable-All-The-Logs)
 
@@ -10,15 +12,15 @@ Used as the default Sysmon configuration file in [Enable-all-the-Logs!](https://
 Below are a list of changes made since forking
 ### EVENT ID 1: (PROCESS CREATE)
 - Removed Conhost exclusion
-- File events in MS Office Templates Directory (Emotet)
-- File events in 'C:\ProgramData' directory (Common for malware stagers)
 ### EVENT ID 7: (IMAGE LOAD)
 - DLL loading from '\appdata\local'
 - DLL loading from '\appdata\roaming'
 - DLL loading from '\Downloads\'
-- DLL loading from 'Non C drives'
+- DLL loading from 'Non "C:\" drives'
 ### EVENT ID 11 (FILE CREATE)
 - MS Office templates directory (Emotet)
+- File events in MS Office Templates Directory (Emotet)
+- File events in 'C:\ProgramData' directory (Common for malware stagers)
 - Include 'C:\ProgramData'
 - Include 'C:\Windows\Tasks'
 - Include 'C:\Windows\Fonts'
