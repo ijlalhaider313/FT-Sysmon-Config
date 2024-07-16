@@ -610,6 +610,7 @@
 			<!--SECTION: Windows:Updates-->
 			<TargetFilename condition="begin with">C:\$WINDOWS.~BT\Sources\</TargetFilename> <!-- Windows: Feature updates containing lots of .exe and .sys-->
 			<Image condition="begin with">C:\Windows\winsxs\amd64_microsoft-windows</Image> <!-- Windows: Windows update-->
+			<Image condition="end with">\Windows\system32\WerFault.exe</Image> <!-- Windows: Windows error reporting -->
 		</FileCreate>
 	</RuleGroup>
 
@@ -859,6 +860,8 @@
 			<TargetObject condition="begin with">HKCR\iTunes.</TargetObject> <!--Apple: iTunes update noise-->
 			<!--WINEVT publishers noise-->
 			<TargetObject condition="is">HKLM\Software\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{945a8954-c147-4acd-923f-40c45405a658}</TargetObject> <!--Windows update-->
+			<!-- Images: Lots of noise-->
+			<Image condition="end with">\CompatTelRunner.exe</Image> <!-- CompatTelRunner.exe -->
 		</RegistryEvent>
 	</RuleGroup>
 
@@ -932,7 +935,6 @@
 				<PipeName condition="begin with">\status_</PipeName>
 				<PipeName condition="begin with">\msagent_</PipeName>
 				<PipeName condition="begin with">\mojo.5688.8052.</PipeName>
-				<PipeName condition="begin with">\wkssvc</PipeName>
 				<PipeName condition="begin with">\ntsvcs</PipeName>
 				<PipeName condition="begin with">\DserNamePipe</PipeName>
 				<PipeName condition="begin with">\SearchTextHarvester</PipeName>
@@ -1281,6 +1283,7 @@
 			<Image condition="contains">\appdata\local\google\chrome\user data\swreporter\</Image>
 			<Image condition="contains">software_reporter_tool.exe</Image>
 			<Image condition="begin with">C:\Program Files</Image>
+			<Image condition="end with">\CompatTelRunner.exe</Image>
 		</FileDeleteDetected>
 	</RuleGroup>
 
